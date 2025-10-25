@@ -60,6 +60,14 @@ class WeddingInvitation extends Model
     }
 
     /**
+     * Get the guestbook entries for the invitation.
+     */
+    public function guestbooks()
+    {
+        return $this->hasMany(Guestbook::class);
+    }
+
+    /**
      * Generate a unique slug for the invitation.
      */
     public static function boot()
